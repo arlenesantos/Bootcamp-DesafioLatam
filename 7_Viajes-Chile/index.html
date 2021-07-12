@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/viajes.svg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Arlene Santos">
+	<meta name="description" content="Planifique su viaje con Viajes Chile, la mejor agencia de viajes de Chile. ¡Arme su paquete de viaje y aclare todas sus dudas con nosotros!">
+	<meta name="keywords" content="Chile, viaje, playa, montaña, desierto, turismo">
+    <title>Viajes Chile</title>
+
+    <!-- Bootstrap 4.5.3 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!--Google Font: Lato (Light)-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    
+    <!--Font Awesome 5.15.3-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    
+    <!-- CSS del proyecto  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-info fixed-top">
+        <div class="container">
+            <a class="navbar-brand padding-navbar" href="#"><img src="./assets/img/viajes.svg" alt="Logo Viajes Chile" class="logo">
+                <p class="nombre-navbar d-inline">Viajes Chile</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link scroll" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link scroll" href="#nosotros">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item d-block d-md-none">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#nosotrosModal">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll" href="#destacados">Destacados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header - carousel-->
+    <header id="inicio" class="carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/img/carousel1.jpg" class="d-block w-100" alt="Primero Slide - foto de llamas">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/carousel2.jpg" class="d-block w-100" alt="Segundo Slide - foto de la Isla de Pascua">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/carousel3.jpg" class="d-block w-100" alt="Tercero Slide - foto de pingüino">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="bg-black text-white">
+        <!--Sección de presentación-->
+        <section>
+            <article id="nosotros" class="container pt-5 d-none d-md-block">
+                <h1 class="text-center">¿Quiénes Somos?</h1>
+                <hr>          
+                <div class="row mt-4 p-3">
+                    <div class="col-md-4">
+                        <span class="d-block bg-info text-center"><i class="fas fa-plane"></i></span>
+                        <p class="pl-1 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fugiat alias odit sequi! Velit, quasi asperiores. Tenetur, sequi quia! Ipsa qui dolores numquam tenetur ipsum ex modi animi officia! Impedit.sit amet consectetur adipisicing elit. Molestiae fugiat alias odit sequi! Velit, quasi asperiores. Tenetur, sequi quia! Ipsa qui dolores numquam tenetur ipsum ex modi animi officia! Impedit numquam tenetur modi animi.</p>
+                    </div>
+                    <div class="col-md-4">                                    
+                        <p class="pl-1 pb-0 mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fugiat alias odit sequi! Velit, quasi asperiores. Tenetur, sequi quia! Ipsa qui dolores numquam tenetur ipsum ex modi animi officia! Impedit.sit amet consectetur adipisicing elit. Molestiae fugiat alias odit sequi! Velit, quasi asperiores. Tenetur, sequi quia! Ipsa qui dolores numquam tenetur ipsum ex modi animi officia! Impedit numquam tenetur modi animi.</p>
+                        <span class="d-block bg-info text-center"><i class="fas fa-mountain"></i></span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="d-block bg-info text-center"><i class="fas fa-route"></i></span>
+                        <p class="pl-1 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fugiat alias odit sequi! Velit, quasi asperiores. Tenetur, sequi quia! Ipsa qui dolores numquam tenetur ipsum ex modi animi officia! Impedit.sit amet consectetur adipisicing elit. Molestiae fugiat alias odit sequi! Velit, quasi asperiores. Tenetur, sequi quia! Ipsa qui dolores numquam tenetur ipsum ex modi animi officia! Impedit numquam tenetur modi animi.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!--Modal-->
+            <article>
+                <div class="modal fade" id="nosotrosModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header ">
+                            <h5 class="modal-title text-info font-weight-bold" id="ModalLabel">¿Quiénes Somos?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body text-secondary text-center">
+                                <span class="">
+                                    <i class="fas fa-plane"></i>
+                                    <i class="fas fa-mountain ml-2"></i>
+                                    <i class="fas fa-route ml-2"></i>
+                                </span><hr>                          
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fugiat alias odit sequi! Velit, quasi asperiores. Tenetur, sequi quia! Ipsa qui dolores numquam tenetur ipsum ex modi animi officia! Impedit.sit amet consectetur adipisicing elit. Molestiae fugiat alias odit sequi! Velit, quasi asperiores. Tenetur, sequi quia! Ipsa qui dolores numquam tenetur ipsum ex modi animi officia! Impedit numquam tenetur modi animi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>              
+            </article>
+        </section>         
+
+        <!--Sección de destacados-->
+        <section>
+            <div id="destacados" class="container pt-5">
+                <h1 class="text-center">Destacados</h1>
+                <hr>          
+                <div class="row p-3">
+                    <div class="col-12 col-md-3 mb-3">
+                        <div class="card h-100 bg-info border-light">
+                            <img src="./assets/img/card1.jpg" class="card-img-top" alt="Destino 1" data-toggle="tooltip" data-placement="bottom" title="Torres del Paine">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">Lorem ipsum dolor sit amet</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nesciunt perferendis nisi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3">
+                        <div class="card h-100 bg-info border-light">
+                            <img src="./assets/img/card2.jpg" class="card-img-top" alt="Destino 2" data-toggle="tooltip" data-placement="bottom" title="Reserva Nacional Los Flamencos">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">Consectetur adipisicing elit</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nesciunt perferendis nisi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3">
+                        <div class="card h-100 bg-info border-light">
+                            <img src="./assets/img/card3.jpg" class="card-img-top" alt="Destino 3" data-toggle="tooltip" data-placement="bottom" title="Laguna Chaxa">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">Sed do elusmod tempor incididunt ut labore</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nesciunt perferendis nisi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3">
+                        <div class="card h-100 bg-info border-light">
+                            <img src="./assets/img/card4.jpg" class="card-img-top" alt="Destino 4" data-toggle="tooltip" data-placement="bottom" title="Floresta valdiviana">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">Ut enim ad minim veniam</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nesciunt perferendis nisi.</p>
+                            </div>
+                        </div>
+                    </div>                
+                </div>  
+            </div>           
+        </section>
+
+        <!--Sección de formulario de contacto-->
+        <section id="contacto" class="container py-5">
+            <h1 class="text-center">Contacto</h1>
+            <hr>
+            <div class="ml-3 mr-3">
+                <div class="typeform-widget" data-url="https://form.typeform.com/to/P3R7gw5q?typeform-medium=embed-snippet" style="width: 100%; height: 500px;"></div> 
+                <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>   
+            </div>            
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="bg-info text-white text-center py-2">
+        <div class="row w-100">
+            <div class="col-12 col-md-6">
+                <p class="text-uppercase footer-title mb-0">Viajes Chile</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <ul class="footer-icons mb-0">
+                    <li class="d-inline"><a href="https://www.github.com" target="_blank"><i class="fab fa-github-square"></i></a></li>
+                    <li class="d-inline ml-2"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="d-inline ml-2"><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                    <li class="d-inline ml-2"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>   
+
+    
+    <!-- jQuery 3.5.1 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Popper.js 1.16.1 -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS 4.5.3 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <!-- JavaScript del proyecto -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</head>

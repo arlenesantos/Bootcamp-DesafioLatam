@@ -1,0 +1,12 @@
+
+h2{
+    font-size: 20px;
+}
+
+.card-text, .list-group-item{
+    font-size: 14px;
+}
+
+footer{
+    height:50px;
+}

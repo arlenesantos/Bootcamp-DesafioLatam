@@ -1,0 +1,27 @@
+
+.logo{
+    font-family: 'Pattaya', sans-serif;
+    font-size: 30px;
+}
+
+.header{
+    margin-top:80px;
+}
+
+.carousel-indicators {
+    margin: 0 0 -40px; 
+}
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;  
+}
+
+.ingredientes li{
+    list-style-type: none;
+}
+
+
+
+

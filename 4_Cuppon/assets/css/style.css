@@ -1,0 +1,24 @@
+body{
+  font-family: 'Roboto', sans-serif;;
+}
+
+.logo-Cuppon{
+  width: 4em;
+}
+
+.card-body i ,.card-body p{
+  color:#707070;
+  line-height: 1.0;
+}
+
+.card-body i{
+  font-size: 0.7em;
+}
+
+.price{
+  font-size: 1.25em;
+}
+
+footer .logo-Cuppon{
+  width: 5em;
+}

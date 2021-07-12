@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/icon" href="./assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Arlene Santos">
+	<meta name="description" content="Encuentra tu SuperHero y conozca sus increíbles poderes">
+	<meta name="keywords" content="API, SuperHero, juego">
+
+    <!-- jQuery Core 3.6.0 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+     
+    <!-- CanvasJS -->
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+    <!-- Bootstrap 4.5.3 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- CSS del proyecto  -->
+    <link rel="stylesheet" href="./assets/css/style.css">     
+
+    <title>Encuentra tu SuperHero</title>
+
+</head>
+<body>
+    <!--Navbar-->   
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/img/sh2.jpg" width="30" height="30" class="d-inline-block align-top" alt="Logo SuperHero" loading="lazy">
+        SuperHero</a>
+    </nav>
+    <!--Header/Imagen-->
+    <header>
+        <div class="text-center pt-3">
+            <img src="./assets/img/sh1.jpg" alt="Logo SuperHero" class="img-fluid">
+            
+        </div>
+    </header>
+    <!--Formulario de busca-->
+    <section>
+        <div class="container w-75 pt-5">
+            <h1>Encuentra tu SuperHero</h1>
+            <form>              
+                <label>Ingresa el número del SuperHero a buscar</label>
+                <input id="heroInput" class="form-control"placeholder="Ingrese un número entre 1 y 731. Intente, por ejemplo, Deadpool - número 213">                
+                <button class="btn btn-primary mt-3 mb-5">Buscar</button>          
+            </form>          
+        </div>
+    </section>
+
+    <!--SuperHero dashboard-->
+    <section class="d-flex justify-content-around">
+        <div class="row container mt-5">
+            <!--SuperHero informaciones-->
+            <div class="col-12 col-lg-7 mb-3" id="heroInfo"></div>
+            <!--SuperHero estadísticas-->
+            <div class="col-12 col-lg-5">
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+            </div>                                  
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-dark mt-5"></footer>
+
+    <!-- JS del proyecto  -->
+    <script src="./assets/js/main.js"></script>
+    
+</body>
+</html>
