@@ -1,0 +1,16 @@
+id,post_id,usuario_id,texto,fecha
+1,6,3,Este es el comentario 1,7/8/2020
+2,2,4,Este es el comentario 2,6/7/2020
+3,4,6,Este es el comentario 3,6/16/2020
+4,13,2,Este es el comentario 4,6/15/2020
+5,6,6,Este es el comentario 5,5/14/2020
+6,3,3,Este es el comentario 6,7/8/2020
+7,1,6,Este es el comentario 7,5/22/2020
+8,7,6,Este es el comentario 8,7/9/2020
+9,13,8,Este es el comentario 9,6/30/2020
+10,6,8,Este es el comentario 10,6/19/2020
+11,1,5,Este es el comentario 11,5/9/2020
+12,15,8,Este es el comentario 12,6/17/2020
+13,9,1,Este es el comentario 13,5/1/2020
+14,5,2,Este es el comentario 14,5/31/2020
+15,3,4,Este es el comentario 15,6/28/2020

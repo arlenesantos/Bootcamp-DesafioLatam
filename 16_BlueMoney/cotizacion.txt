@@ -1,0 +1,9 @@
+A la fecha: 2021-08-21T01:00:00.000Z 
+
+            Fue realizada cotización con los siguientes datos: 
+
+            Cantidad de pesos a convertir: 250000 pesos 
+
+            Convertido a "dolar" da un total de: 
+
+            $ 316.4637079419732
