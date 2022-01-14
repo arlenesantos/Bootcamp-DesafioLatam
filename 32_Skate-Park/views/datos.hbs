@@ -1,0 +1,87 @@
+<div class="py-4">
+  <h2>Datos del perfil</h2>
+  <hr class="w-50" />
+
+  <form>
+    <input id="id" type="hidden" value="{{data.id}}">
+    <div class="form-group row w-50 m-auto">
+      <div class="form-group col-12 col-sm-6">
+        <label>Email</label>
+        <input id="email" class="form-control m-auto" disabled value="{{ data.email}}" />
+      </div>
+      <div class="form-group col-12 col-sm-6">
+        <label>Nombre</label>
+        <input id="nombre" class="form-control m-auto" value="{{data.nombre}}" />
+      </div>
+      <div class="form-group col-12 col-sm-6">
+        <label>Password</label>
+        <input id="password" type="password" class="form-control m-auto" value="{{data.password}}" />
+      </div>
+      <div class="form-group col-12 col-sm-6">
+        <label>Repita la password</label>
+        <input id="repitaPassword" type="password" class="form-control m-auto" value="{{data.password}}" />
+      </div>
+      <div class="form-group col-12 col-sm-6">
+        <label>Años de experiencia</label>
+        <input id="experiencia" class="form-control m-auto" value="{{data.anos_experiencia}}" />
+      </div>
+      <div class="form-group col-12 col-sm-6">
+        <label>Especialidad</label>
+        <input id="especialidad" class="form-control m-auto" value="{{data.especialidad}}" />
+      </div>
+    </div>
+    <div class="mb-1">
+      <button id="actualizar" class="btn btn-primary">Actualizar</button>
+    </div>
+    <div>
+      <button id="eliminar" class="btn btn-danger">Eliminar cuenta</button>
+    </div>
+  </form>
+</div>
+
+
+<script>
+  let buttonActualizar = document.getElementById('actualizar');
+  let buttonEliminar = document.getElementById('eliminar');
+
+  buttonActualizar.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const id = document.getElementById('id').value;
+    const email = document.getElementById('email').value;
+    const nombre = document.getElementById('nombre').value;
+    const password = document.getElementById('password').value;
+    const repetirPassword = document.getElementById('repitaPassword').value;
+    const anos_experiencia = document.getElementById('experiencia').value;
+    const especialidad = document.getElementById('especialidad').value;
+
+    fetch("http://localhost:3000/participantes", {
+      method: "PUT",
+      body: JSON.stringify({ id, email, nombre, password, repetirPassword, anos_experiencia, especialidad }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    }).then(res => res.json()).then(data => {
+      alert("Participante actualizado con éxito")
+      location.href = "http://localhost:3000"
+    }).catch(error => console.log(error))
+  });
+
+  buttonEliminar.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const id = document.getElementById('id').value;
+
+    fetch("http://localhost:3000/participantes", {
+      method: "DELETE",
+      body: JSON.stringify({ id }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    }).then(data => {
+      alert("Participante eliminado con éxito")
+      location.href = "http://localhost:3000"
+    }).catch(error => console.log(error))
+  });
+
+</script>

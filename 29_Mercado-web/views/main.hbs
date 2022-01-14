@@ -1,0 +1,40 @@
+{{! comentarios}}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mercado Web</title>
+
+    <!-- Bootstrap v. 4.6 -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- 2. Incluir en la vista un parcial que contenga el menú del sitio web y sea renderizado antes del Dashboard. -->
+    <!-- Menu -->
+    {{> menu}}
+
+    <!-- Dashboard -->
+    {{> dashboard }} 
+
+    <!-- Modal de compras -->
+    {{> compras }}
+
+
+    
+
+    <!-- Jquery v. 3.6 -->
+    <script src="/jquery/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/bootstrap/js/bootstrap.js"></script>
+
+    
+</body>
+
+</html>

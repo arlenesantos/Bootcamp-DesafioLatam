@@ -1,0 +1,18 @@
+{{! 3.Crear un parcial “producto” que contenga el template correspondiente a la
+presentación de cada producto en el Dashboard y reciba como parámetro el nombre
+del producto.}}
+
+{{#each productos}}
+<div class="col mb-4">
+    <div class="card">
+        <div style="width: 40%; display: inline-block; margin: 0 auto">
+            <a href="/{{this}}">
+                <img src="{{this}}.png" class="card-img-top" alt="{{this}}">
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{this}}</h5>
+        </div>
+    </div>
+</div>
+{{/each}}

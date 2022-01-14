@@ -1,0 +1,43 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<div class="py-5">
+  <h2>Iniciar Sesión</h2>
+  <hr class="w-50" />
+
+  <form>
+    <div class="form-group">
+      <div class="form-group">
+        <label>Email</label>
+        <input id="email" class="form-control w-50 m-auto" />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="password" class="form-control w-50 m-auto" />
+      </div>
+    </div>
+    <button id="ingresar" class="btn btn-success mb-3">Ingresar</button>
+    <p>¿Aún no tienes cuenta? <a href="http://localhost:3000/participantes">Regístrate</a></p>
+  </form>
+</div>
+
+<script>
+  let button = document.getElementById('ingresar');
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let payload = { email, password };
+
+    axios.post('/verificacion', payload).then(data => {
+      const token = data.data;
+      alert(`Participante autenticado con éxito!`);
+      localStorage.setItem('token', token);
+      window.location.href = `/participantes?token=${token}`
+
+    }).catch(({ response }) => alert(response.data.error));
+
+  });
+
+</script>

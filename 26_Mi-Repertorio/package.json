@@ -1,0 +1,16 @@
+{
+  "name": "Desafio-Mi-repertorio",
+  "version": "1.0.0",
+  "description": "**Desarrolladores:**\r Alejandra Cristi,\r Andrea Carreño,\r Arlene Santos,\r Isaac Piedra,\r Osvaldo Molina",
+  "main": "consultas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.7.1"
+  }
+}
