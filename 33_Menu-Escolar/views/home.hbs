@@ -1,0 +1,69 @@
+
+<section class="container py-5">
+    <div>
+        <div class="row pb-3">
+            <div class="col">
+                <h1>Pedidos</h1>                
+            </div>
+            <div class="col">
+                <a href="/orders/new" class="btn btn-success">Nuevo Pedido</a>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">                    
+                    <div class="card-body">
+                        <p class="card-text">M1: Menú Vegetariano</p>
+                        <p class="card-text">M2: Menú Celiaco</p>
+                        <p class="card-text">M3: Menú Estándar</p>
+                    </div>
+                </div>
+            </div>
+           <div class="col">
+                <div class="card">                    
+                    <div class="card-body">
+                        <p class="card-text">M4: Menú Calórico</p>
+                        <p class="card-text">M5: Menú Autóctono</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <div class="table-responsive py-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>M1</th>
+                    <th>M2</th>
+                    <th>M3</th>
+                    <th>M4</th>
+                    <th>M5</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each orders}}
+                <tr {{#if this.is_rectified}} class="table-warning" {{else}} class="table-success" {{/if}}>
+                    <th>{{this.date}}</th>
+                    <td>{{this.vegetarian}}</td>
+                    <td>{{this.celiac}}</td>
+                    <td>{{this.standard}}</td>
+                    <td>{{this.caloric}}</td>
+                    <td>{{this.ethnic}}</td>
+                    <td>{{#if this.is_rectified}} 
+                        <a href="/orders/?id={{this.id}}" class="btn btn-warning">Ver Detalle</a>                         
+                        {{else}}
+                        <a href="/orders/rectify?id={{this.id}}" class="btn btn-success">Rectificar</a>                        
+                        {{/if}}
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+

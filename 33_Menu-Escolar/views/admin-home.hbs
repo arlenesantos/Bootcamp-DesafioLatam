@@ -1,0 +1,170 @@
+<section class="container py-5">
+    <div>
+        <h1>Pedidos</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">M1: Menú Vegetariano</p>
+                        <p class="card-text">M2: Menú Celiaco</p>
+                        <p class="card-text">M3: Menú Estándar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">M4: Menú Calórico</p>
+                        <p class="card-text">M5: Menú Autóctono</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-5">
+        <h2>Filtros</h2>
+        <form class="row row-cols-lg-auto g-3 align-items-center" action="/?">
+            <div class="col-12">
+                <label for="school" class="form-label">Liceo</label>
+                <select class="form-select" id="school" name="school">
+                    <option selected> Seleccione</option>
+                    {{#each schools}}
+                    <option value="{{this.id}}">{{this.school}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="col-12">
+                <label for="initialDate" class="form-label">Desde</label>
+                <input type="date" class="form-control" id="initialDate" name="initialDate">
+            </div>
+            <div class="col-12">
+                <label for="untilDate" class="form-label">Hasta</label>
+                <input type="date" class="form-control" id="untilDate" name="untilDate">
+            </div>
+            <div class="col-12">
+                <br>
+                <button type="submit" class="btn btn-primary mt-2">Filtrar</button>
+            </div>
+            <div class="col-12">
+                <br>
+                <a href="/" class="btn btn-primary mt-2">Todos</a>
+            </div>
+        </form>
+
+    </div>
+
+
+    <div class="table-responsive py-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Liceo</th>
+                    <th>M1</th>
+                    <th>M2</th>
+                    <th>M3</th>
+                    <th>M4</th>
+                    <th>M5</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each orders}}
+
+                <tr {{#if this.is_rectified}} class="table-warning" {{else}} class="table-success" {{/if}}>
+                    <th>{{this.date}}</th>
+                    <th>{{this.school_name}}</th>
+                    <td>{{this.vegetarian}}</td>
+                    <td>{{this.celiac}}</td>
+                    <td>{{this.standard}}</td>
+                    <td>{{this.caloric}}</td>
+                    <td>{{this.ethnic}}</td>
+                    <td>{{#if this.is_rectified}}
+                        <span></span>
+                        {{else}}
+                        <a href="/orders?id={{this.id}}" class="btn btn-warning">Ver Detalle</a>
+                        {{/if}}
+                    </td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- news -->
+    <div>
+        
+        <div class="mt-5">
+            <h2>Noticias</h2>
+            <div class="table-responsive mb-3">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Titulo</th>
+                            <th>Contenido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each news}}
+
+                        <tr>
+                            <td>{{this.date}}</td>
+                            <td>{{this.title}}</td>
+                            <td>{{this.content}}</td>
+                        </tr>
+                        {{/each}}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- news modal starts -->
+        <div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Crear
+                noticia </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Noticia</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/" method="POST">
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <input type="hidden" name="id">
+                                        <label for="title" class="form-label">Titulo</label>
+                                        <input type="text" class="form-control" id="title" name="title" required>
+                                    </div>                                    
+                                </div>
+                                <div class="mb-3">
+                                    <label for="content" class="form-label">Contenido</label>
+                                    <textarea class="form-control" id="content" name="content" rows="3"
+                                        required></textarea>
+                                </div>
+                                <div class="mb-3">                                    
+                                    <button type="submit" class="btn btn-primary">Crear</button>
+                                </div>
+                            </form>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- news modal ends -->
+
+    </div>
+
+
+
+</section>

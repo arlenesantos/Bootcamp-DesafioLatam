@@ -1,0 +1,55 @@
+<section class="container py-5">
+    <h1>Nuevo Pedido</h1>
+    <div class="pt-5">
+        <form class="row gy-2 gx-3 align-items-center" action="/orders/new" method="POST">
+            <div class="row">
+                <div class="col-6 mb-3">
+                    <input type="hidden" value="{{school.id}}" name="school_id">
+                    <input type="number" min="0" max="1000" class="form-control" placeholder="M. Vegetarianos"
+                        name="vegetariano" aria-label="M. Vegetarianos" required>
+                </div>
+                <div class="col-6 mb-3">
+                    <input type="number" min="0" max="1000" class="form-control" placeholder="M. Calórico"
+                        name="calorico" aria-label="M. Calórico" required>
+                </div>
+                <div class="col-6 mb-3">
+                    <input type="number" min="0" max="1000" class="form-control" placeholder="M. Celiacos"
+                        name="celiacos" aria-label="M. Celiacos" required>
+                </div>
+                <div class="col-6 mb-3">
+                    <input type="number" min="0" max="1000" class="form-control" placeholder="M. Autóctono"
+                        name="autoctono" aria-label="M. Autóctono" required>
+                </div>
+                <div class="col-6 mb-3">
+                    <input type="number" min="0" max="1000" class="form-control" placeholder="M. Estandar"
+                        name="estandar" aria-label="M. Estandar" required>
+                </div>
+                <div class="col-6 mb-3">
+                    <input type="date" class="form-control" name="date" id="date" min="2022-01-01" value="" required>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-secondary">Agregar</button>
+                </div>
+            </div>
+    </div>
+    </form>
+
+</section>
+
+<script>
+
+    (() => {
+
+        let date = new Date();
+        
+        //yyyy-mm-dd:
+        let today = `${date.getFullYear()}-${('0' + (date.getMonth() + 1)).slice(-2)}-${('0' + date.getDate()).slice(-2)}`;                    
+        
+        document.getElementById("date").value = today;
+    })()
+
+
+
+
+
+</script>

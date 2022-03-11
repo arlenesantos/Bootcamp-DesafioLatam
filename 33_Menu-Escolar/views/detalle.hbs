@@ -1,0 +1,32 @@
+<section class="container py-5">
+    <h1>Detalle del Pedido {{order.id}} (ordenado el {{order.date}})</h1>
+    <div>
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">Menús Vegetarianos: Se ordenaron {{order.vegetarian}}, se consumieron {{order.vegetarian_real}}</p>
+                <p class="card-text">Menús Celiacos: Se ordenaron {{order.celiac}}, se consumieron {{order.celiac_real}}</p>
+                <p class="card-text">Menús Estándar: Se ordenaron {{order.standard}}, se consumieron {{order.standard_real}}</p>
+                <p class="card-text">Menús Calóricos: Se ordenaron {{order.caloric}}, se consumieron {{order.caloric_real}}</p>
+                <p class="card-text">Menús Étnicos: Se ordenaron {{order.ethnic}}, se consumieron {{order.ethnic_real}}</p>
+                <div class="row">
+                    <div class="col fw-bold">
+                        <p>Se perdieron en total {{order.lost}} raciones</p>
+                    </div> 
+                </div>
+                <div class="row">
+                    {{#if order.observations}}
+                    <div class="col">
+                        <p>Observaciones: {{order.observations}}</p>                                               
+                    </div>
+                    {{/if}}
+                    <div class="col">
+                        <a href="/" class="btn btn-secondary">Volver a Home</a>                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>

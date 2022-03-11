@@ -1,0 +1,56 @@
+<section class="container py-5">
+    <h1>Rectificación del Pedido {{order.id}} (ordenado el {{order.date}})</h1>
+    <div class="pt-5">
+
+        <form class="pt-5 row gy-2 gx-3 align-items-center" action="/orders/rectify" method="POST">
+            <div class="row">
+                <div class="col-3 mb-3">
+                    <input type="hidden" value="{{order.id}}" name="id">
+                    <input type="number" min="0" max="{{order.vegetarian}}" class="form-control"
+                        placeholder="M. Vegetarianos" name="vegetariano" aria-label="M. Vegetarianos" required>
+                </div>
+                <div class="col-3 mb-3">
+                    <label for="vegetariano">Ordenó: {{order.vegetarian}} </label>
+                </div>
+                <div class="col-3 mb-3">
+                    <input type="number" min="0" max="{{order.caloric}}" class="form-control"
+                        placeholder="M. Calórico" name="calorico" aria-label="M. Calórico" required>
+                </div>
+                <div class="col-3 mb-3">
+                    <label for="calorico">Ordenó: {{order.caloric}}</label>
+                </div>
+                <div class="col-3 mb-3">
+                    <input type="number" min="0" max="{{order.celiac}}" class="form-control"
+                        placeholder="M. Celiacos" name="celiacos" aria-label="M. Celiacos" required>
+                </div>
+                <div class="col-3 mb-3">
+                    <label for="celiacos">Ordenó: {{order.celiac}} </label>
+                </div>
+                <div class="col-3 mb-3">
+                    <input type="number" min="0" max="{{order.ethnic}}" class="form-control"
+                        placeholder="M. Autóctono" name="autoctono" aria-label="M. Autóctono" required>
+                </div>
+                <div class="col-3 mb-3">
+                    <label for="autoctono">Ordenó: {{order.ethnic}} </label>
+                </div>
+                <div class="col-3 mb-3">
+                    <input type="number" min="0" max="{{order.standard}}" class="form-control"
+                        placeholder="M. Estandar" name="estandar" aria-label="M. Estandar" required>
+                </div>
+                <div class="col-3 mb-3">
+                    <label for="estandar">Ordenó: {{order.standard}} </label>
+                </div>
+                <div class="row">
+                    <div class="col-9">
+                        <textarea name="observaciones" id="observaciones" maxlength="1024" placeholder="Observaciones"
+                            class="w-75"></textarea>
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-secondary">Rectificar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</section>
