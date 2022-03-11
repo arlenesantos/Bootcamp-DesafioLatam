@@ -53,6 +53,4 @@ email: liceo32@school.com
 password: 456
 ```
 
-# 7. Author
 
-Arlene Santos
